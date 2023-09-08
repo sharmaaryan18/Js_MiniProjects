@@ -91,6 +91,24 @@ function calcStrength() {
      },2000);
 }
 
+function handleCheckBoxChange() {
+    checkCount=0;
+    allCheckBox.forEach((checkbox)=>{
+        checkbox.addEventListener('change', handleCheckBoxChange);
+        checkCount++;
+    })
+
+    //Special Conditiion
+    if(passwordLength < checkCount) {
+        passwordLength = checkCount;
+        handleSlider;
+    }
+}
+
+allCheckBox.forEach((checkbox)=>{
+   checkbox.addEventListener('change',handleCheckBoxChange); 
+})
+
 inputSlider.addEventListener('input', function (e) {
         passwordLength = e.target.value;
         handleSlider();
@@ -100,6 +118,16 @@ copyBtn.addEventListener('click', ()=>{
     if(passWordDisplay.value)
     copyContent(); 
 })
+
+generate.addEventListener('click',() => {
+    //none of the checkboxes are selected
+    if(checkCount<=0) return;
+
+    if(passwordLength<checkCount) {
+        passwordLength=checkCount;
+        handleSlider;
+    }
+});
 
 
  
