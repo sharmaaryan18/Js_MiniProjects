@@ -1,56 +1,87 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                   
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password-Generator</title>
+    <link rel="shortcut icon" href="./assets/favicon2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
 </head>
 <body>
-    <div class="container">
+    <!-- <iframe src="https://giphy.com/embed/LESpNIDaNBUcRIPzng" width="480" height="466" frameBorder="0"
+            class="giphy-embed gif-1">
+    </iframe> -->
+    <!--   -----------SOURCE OF THIS "GIF"------------------
+        "https://giphy.com/gifs/gears-setting-configure-LESpNIDaNBUcRIPzng"
+        allowFullScreen
+    -->
+
+    <div class="main-container">
         <h1>Password Generator</h1>
-        <div class="display-container">
-            <input readonly placeholder="Password" class="display" data-passwordDisplay>
-            <button data-copy><span data-cpoyMsg></span>
-            <img src="copy.svg" alt="copy" width="23" height="23"></button>
+        <!-- -----display-container----- -->
+        <div class="password-tab">
+            <input readonly class="display" placeholder="Password" data-passwordDisplay>
+            <button class="copyBtn" data-copy>
+                <span class="tooltip" data-copyMsg></span>
+                <img src="./assets/copy.svg" alt="" width="23" height="23">
+            </button>
+
         </div>
 
-        <div class="input-container">
-            <!--PasswordLength CheckBox-->
-            <div class="length-container">
-                <p>Password Length</p>
+        <!-- -------input-container----- -->
+        <div class="input-window">
+            <!-- password-length-section -->
+            <div class="length-bar">
+                <p>Password length</p>
                 <p data-lengthNumber>0</p>
             </div>
-            <!--Slider-->
-            <input type="range" min="1" max="2 0" class="slider" step="1" data-lengthSlider>
 
-            <!--checkboxes-->
-            <div>
+            <!-- ---slider--- -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+            <!-- -checkBoxes- -->
+            <div class="check">
                 <input type="checkbox" id="uppercase">
-                <label for="uppercase">Includes Uppercase letters</label>
+                <label for="uppercase" class="checkCases">Include Uppercase Letters</label>
             </div>
-            <div>
+
+            <div class="check">
                 <input type="checkbox" id="lowercase">
-                <label for="lowercase">Includes Includes lowercase symbols</label>
+                <label for="lowercase" class="checkCases">Include Lowercase Letters</label>
             </div>
-            <div>
+
+            <div class="check">
                 <input type="checkbox" id="numbers">
-                <label for="numbers">Includes lowercase letters</label>
+                <label for="numbers" class="checkCases">Include Numbers </label>
             </div>
-            <div>
+
+            <div class="check">
                 <input type="checkbox" id="symbols">
-                <label for="symbols">Includes Numbers</label>
+                <label for="symbols" class="checkCases">Include Symbols  </label>
             </div>
-            
-            <!--Strength-Section-->
-            <div class="strength-container">
+
+
+            <!-- strength-section -->
+            <div class="strength-tab">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" data-indicator></div>
             </div>
-            <!--GeneratePasswordButton-->
-            <button class="generateButtton">GENERATE PASSWORD</button>
+
+            <!-- -last-button- -->
+            <button class="generator-button">
+                GENERATE PASSWORD
+            </button>
         </div>
+
     </div>
 
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
