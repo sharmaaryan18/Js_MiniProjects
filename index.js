@@ -15,7 +15,7 @@ const symbols = '!@~`#$%^&*(){}:?/";';
 
 let password="";
 let passwordLength = 15;
-let checkCount =1;
+let checkCount =0;
 
 handleSlider();
 // Set the length of Password
@@ -91,6 +91,10 @@ function calcStrength() {
      },2000);
 }
 
+function shufflePassword(Array) {
+    //Fisher Yates Method
+}
+
 function handleCheckBoxChange() {
     checkCount=0;
     allCheckBox.forEach((checkbox)=>{
@@ -127,7 +131,55 @@ generate.addEventListener('click',() => {
         passwordLength=checkCount;
         handleSlider;
     }
-});
+})
+
+    //lets start the journey to find new Password
+    //remove old password
+    password = "";
+
+    //let's put the stuff mentioned by checkboxes
+    // if(uppercaseCheck.checked) {
+    //     password += generateUpperCase();
+    // }
+    // if(lowercaseCheck.checked) {
+    //     password += generatelowerCase();
+    // }
+    // if(numbersCheckCheck.checked) {
+    //     password += generateRandomNumber();
+    // }
+    // if(symbolsCheck.checked) {
+    //     password += generateSymbol();
+    // }
+
+    let funcArr =[];
+    if(uppercaseCheck.checked)
+        funcArr.push(generateUpperCase);
+    if(lowercaseCheck.checked)
+        funcArr.push(generateLowerCase);
+    if(numbersCheck.checked)
+        funcArr.push(generateRandomNumber);
+    if(symbolsCheck.checked)
+        funcArr.push(generateSymbol);
+
+        //Compulsory addition
+        for(let i=0;i<funcArr.length;i++) {
+            password +=funcArr[i]();
+        }
+
+        //remaining addition
+        for(let i=0;i<passwordLength-funcArr.length;i++) {
+            let randIndex = getRndInteger(0, funcArr.length);
+            password += funcArr[randIndex]();
+        }
+
+        //shuffle password
+        password=shufflePassword(Array.from(password));
+        //Show in UI
+        passWordDisplay.value=password;
+
+        //Calculate Strength
+        calcStrength(); 
+
 
 
  
