@@ -11,7 +11,7 @@ const numbersCheck = document.querySelector("#numbers");
 const symbolsCheck = document.querySelector("#symbols");
 const lightIndicator = document.querySelector("[data-indicator]");
 // const indicator = document.querySelector("[data-indicator]");
-const generatorBtn = document.querySelector(".generator-button");
+const generateBtn = document.querySelector(".generate-button");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbolsList = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 // const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
@@ -99,7 +99,7 @@ async function copyContent () {
 
 
 function shufflingPassword(array) {
-    //Fisher Yates Method :::---- [FINDING A (J) INDEX RANDOMLY AND SWAPPING IT WITH Ith INDEX]
+    //Fisher Yates Method=> [FINDING A (j) INDEX RANDOMLY AND SWAPPING IT WITH ith INDEX]
     for (let i = array.length - 1; i > 0; i--) {
         //random J, find out using random function
         const j = Math.floor(Math.random() * (i + 1));
@@ -140,7 +140,7 @@ copyBtn.addEventListener('click', () => {
         copyContent();
 })
 
-generatorBtn.addEventListener('click', () => {
+generateBtn.addEventListener('click', () => {
     //none of the checkbox are selected
     if(countCheck == 0)
         return;

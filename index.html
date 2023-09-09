@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password-Generator</title>
-    <link rel="shortcut icon" href="./assets/favicon2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <!-- <iframe src="https://giphy.com/embed/LESpNIDaNBUcRIPzng" width="480" height="466" frameBorder="0"
@@ -23,22 +23,22 @@
         allowFullScreen
     -->
 
-    <div class="main-container">
+    <div class="container">
         <h1>Password Generator</h1>
         <!-- -----display-container----- -->
-        <div class="password-tab">
+        <div class="display-container">
             <input readonly class="display" placeholder="Password" data-passwordDisplay>
             <button class="copyBtn" data-copy>
                 <span class="tooltip" data-copyMsg></span>
-                <img src="./assets/copy.svg" alt="" width="23" height="23">
+                <img src="copy.svg" alt="" width="23" height="23">
             </button>
 
         </div>
 
         <!-- -------input-container----- -->
-        <div class="input-window">
+        <div class="input-container">
             <!-- password-length-section -->
-            <div class="length-bar">
+            <div class="length-container">
                 <p>Password length</p>
                 <p data-lengthNumber>0</p>
             </div>
@@ -69,13 +69,13 @@
 
 
             <!-- strength-section -->
-            <div class="strength-tab">
+            <div class="strength-container">
                 <p>Strength</p>
                 <div class="indicator" data-indicator></div>
             </div>
 
             <!-- -last-button- -->
-            <button class="generator-button">
+            <button class="generate-button">
                 GENERATE PASSWORD
             </button>
         </div>
