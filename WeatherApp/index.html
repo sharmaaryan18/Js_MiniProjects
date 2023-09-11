@@ -7,8 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hello everyone
+  <div class="wrapper">
+    <h1>Weather App</h1>
 
+    <div class=" tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+    </div>
+    <div class="weather-container">
+        <!--Grant Location Container-->
+        <div class="grant-location-container"><img src="location.png"  width="80" height="80" loading="lazy">
+        <p>grant Access Location</p>
+        <p>Allow Access to get Weather Information</p>
+        <button class="btn" data-grantAccess>Grant Access</button>
+    </div>
+    <!--Search Form-->
+    <form class="form-container" data-searchForm>
+        <input placeholder="Search for City..." data-searchInput>
+        <button class="btn">
+            <img src="search.png" alt="Search-Button-Image" width="20" height="20" loading="lazy">
+        </button>
+    </form>
+    <!--Loading Screen Container-->
+    <div class="loading-container">
+        <img src="loading.gif" alt="loading-gif-img" width="150" height="150">
+    </div>
+    </div>
+    <!--Show Weather info-->
+    <div class="user-info-container">
+        <div class="name">
+            <p data-cityName></p>
+            <img data-countryIcon>
+        </div>
+        <p data-weatherDescription></p>
+        <img data-weatherIcon>
+        <p data-temp></p>
+
+        <!-- 3 - Cards - Parameters -->
+      <div class="parameter-container">
+            <!--card1--> 
+         <div class="parameter">
+            <img src="wind.png" alt="wind
+            ">
+            <p>windspeed</p>
+            <p data-windspeed></p>
+         </div>
+           <!--card2--> 
+           <div class="parameter">
+            <img src="humidity.png" alt="wind
+            ">
+            <p>Humidity</p>
+            <p data-windspeed></p>
+         </div>
+           <!--card3--> 
+           <div class="parameter">
+            <img src="cloud.png" alt="wind
+            ">
+            <p>Cloudy</p>
+            <p data-windspeed></p>
+         </div>
+      </div>
+       
+    </div>
+  </div>
+ 
     <script src="script.js"></script>
 </body>
 </html>
