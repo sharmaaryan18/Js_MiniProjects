@@ -135,7 +135,7 @@ searchForm.addEventListener("submit",(e)=> {
     let cityName = searchInput.value;
 
     if(cityName === "")
-    return
+    return 
     else
     fetchSearchWeatherInfo(cityName);
 })
