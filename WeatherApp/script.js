@@ -166,8 +166,48 @@ async function fetchSearchWeatherInfo(city) {
     }
     catch(err) {
         //hW
+        
     }
 }
+
+
+
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const wrapper = document.querySelector(".wrapper");
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    wrapper.classList.toggle("dark-mode"); // Toggle the dark mode class
+
+    // Toggle the background color of the moon icon button
+    const isDarkMode = wrapper.classList.contains("dark-mode");
+    darkModeToggle.style.backgroundColor = isDarkMode ? "#fff" : "#000";
+}
+
+// Event listener for clicking the moon icon
+darkModeToggle.addEventListener("click", toggleDarkMode);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
