@@ -150,18 +150,12 @@ generateBtn.addEventListener('click', () => {
         handlingSlider();
     }
 
-    // finding--new-password....
+    // Finding  New-password
 
     console.log("Starting of generating");
 
-    // removing... old-password
+    // Removing   Old-password
     password = "";
-
-                    //checking checked checkBoxes
-
-    // if(uppercaseCheck.checked){
-    //     password += generateUpperCase();
-    // }
 
     let funcArr = [];
     if(uppercaseCheck.checked){
@@ -185,7 +179,6 @@ generateBtn.addEventListener('click', () => {
 
     //rest of the characters
     //for(let i = funcArr.length; i < password.length; i++)
-    //              oooooooooorrrrrrrrrrr
     for(let i = 0; i < passwordLength - funcArr.length; i++){
         let randomIndex = getRandomInteger(0, funcArr.length);
         password += funcArr[randomIndex]();
