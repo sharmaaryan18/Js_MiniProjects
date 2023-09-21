@@ -1,8 +1,8 @@
 const lengthSlider = document.querySelector("[data-lengthSlider]");
-// const inputSlider = document.querySelector("[data-lengthSlider]");
+
 const lengthDisplay = document.querySelector("[data-lengthNumber]");
 const passwordTab = document.querySelector("[data-passwordDisplay]");
-// const passwordDisplay = document.querySelector("[data-passwordDisplay]");
+
 const copyBtn = document.querySelector("[data-copy]");
 const copyMsg = document.querySelector("[data-copyMsg]");
 const uppercaseCheck = document.querySelector("#uppercase");
@@ -10,14 +10,14 @@ const lowercaseCheck = document.querySelector("#lowercase");
 const numbersCheck = document.querySelector("#numbers");
 const symbolsCheck = document.querySelector("#symbols");
 const lightIndicator = document.querySelector("[data-indicator]");
-// const indicator = document.querySelector("[data-indicator]");
+
 const generateBtn = document.querySelector(".generate-button");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbolsList = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
-// const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 
 
-// -initailly- //
+
+//initailly
 let password="";
 let passwordLength = 10;
 let countCheck = 0;
