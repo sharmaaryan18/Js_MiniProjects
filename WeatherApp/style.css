@@ -235,10 +235,6 @@ h1 {
 
 
 
-/* Your existing CSS code */
-
-/* Add this CSS for Dark Mode */
-
 .dark-mode {
     background-color: #000; /* Dark background color */
     color: #fff; /* Light text color */
@@ -250,7 +246,7 @@ h1 {
     border: 1px solid #fff; /* White border for the toggle button */
 }
 
-/* Update the following styles for dark mode */
+
 
 .wrapper.dark-mode {
     background-image: linear-gradient(160deg, #000 0%, #333 100%); /* Dark background gradient */
@@ -270,11 +266,7 @@ h1 {
     background-color: rgba(100, 100, 100, 0.7); /* Dark background for the current tab */
 }
 
-/* Update the dark mode styles for other elements as needed */
 
-/* ... Add more dark mode styles for your specific elements ... */
-
-/* Add these styles for the dark mode toggle button */
 
 #dark-mode-toggle {
     position: fixed;
@@ -317,11 +309,7 @@ h1 {
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
-/* Style the moon icon */
 
-
-/* Default styles for larger screens */
-/* Add your existing CSS styles here */
 
 /* Media query for tablets and smaller screens */
 @media (max-width: 768px) {
@@ -381,7 +369,6 @@ h1 {
         font-size: 1rem; /* Adjust font size as needed */
     }
     
-    /* Add more rules for other elements you want to adjust */
 }
 
 /* Adjust margins and paddings for smaller screens */
@@ -402,7 +389,6 @@ h1 {
         padding: 1rem; /* Adjust paddings as needed */
     }
     
-    /* Add more rules for other elements you want to adjust */
 }
 
 
@@ -414,12 +400,11 @@ h1 {
         display: none; /* Hide these elements */
     }
 
-    /* Example: Hide the search form as well */
     .form-container {
         display: none; /* Hide the search form */
     }
     
-    /* Add similar rules to hide other elements as needed */
+
 }
 
 
